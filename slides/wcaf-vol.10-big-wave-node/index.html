@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.">
+    <meta name="author" content="Bartek Szopka">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet">
+
+    <link href="components/normalize-css/normalize.css" rel="stylesheet">
+    <link href="css/impress-demo.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  </head>
+
+  <body class="impress-not-supported">
+
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress"><script type="text/javascript" src="js/knockout-latest.js"></script>
+
+<div class="step" id="title" data-x="0" data-y="800" data-rotate="0"><h1>Big Wave Node</h1></div>
+<!-- id: title -->
+
+<div class="step" data-x="0" data-y="1600" data-rotate="0"><h2>自己紹介</h2><ul>
+<li>山越崇裕と申します</li>
+<li>jig.jp という会社から来ました</li>
+<li>イカちゃんとかコッシーとか呼ばれてます</li>
+</ul></div>
+
+<div class="step" data-x="0" data-y="2400" data-rotate="0"><h2>普段の仕事</h2><ul>
+<li>hottoLINE, COPAIN といったチャットアプリの裏側作りました</li>
+<li>Pairin というアプリの HTML 部分を担当</li>
+</ul></div>
+
+<div class="step" data-x="0" data-y="3200" data-rotate="0"><h2>社外では</h2><ul>
+<li>JAWS UG 勉強会</li>
+<li>Mashup Award 8 で企業賞</li>
+<li>その他、ハッカソン出現率高し</li>
+</ul></div>
+
+<div class="step" data-x="0" data-y="4000" data-rotate="0"><h2>なぜ WCAF に<br>呼ばれたのか</h2><ul>
+<li>node 初期の頃、いろいろ作ってた<ul>
+<li>twitter のタイムラインをリアルタイムマッピング</li>
+<li>ハッシュタグ監視ツール</li>
+</ul>
+</li>
+</ul><p>多分、JS の話を期待されてる！</p></div>
+
+
+<div class="step" data-rotate="90" data-x="0" data-y="4800"><h2>カミングアウト</h2></div>
+<!-- data-rotate: '+90' -->
+
+<div class="step" data-x="-800" data-y="4800" data-rotate="90"><h3>最近 JS 触ってません</h3><ul>
+<li>１年くらいサーバオンリー<ul>
+<li>Pairin が１年前</li>
+</ul>
+</li>
+<li>すいません</li>
+</ul></div>
+
+<div class="step" data-x="-1600" data-y="4800" data-rotate="90"><h1>久々に JS</h1></div>
+<div class="step" data-x="-2400" data-y="4800" data-rotate="90"><h2>復帰早々気づいたこと</h2><p><strong>node ってすげえな</strong></p></div>
+
+<div class="step" data-x="-3200" data-y="4800" data-rotate="90"><h2>やたら目にする<br>ブログ記事</h2><ul>
+<li>フロントエンドエンジニアにおけるNode.jsのススメ<ul>
+<li><a href="http://ameblo.jp/ca-1pixel/entry-11476850674.html">http://ameblo.jp/ca-1pixel/entry-11476850674.html</a></li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="4800" data-rotate="90"><h2>やたら目にする npm</h2><ul>
+<li>npm install bower -g</li>
+<li>npm install grunt-cli -g</li>
+<li>npm! npm!</li>
+</ul></div>
+
+<div class="step" data-x="-4800" data-y="4800" data-rotate="90"><h2>なんでだろう？</h2><p>考えてみた</p></div>
+
+<div class="step" data-x="-5600" data-y="4800" data-rotate="90"><h3>インストールしやすい</h3><ul>
+<li>mac なら pkg</li>
+<li>windows なら exe</li>
+<li>linux なら rpm</li>
+</ul><p>それぞれ公式が配布！</p></div>
+
+
+<div class="step" data-x="-6400" data-y="4800" data-rotate="90"><h3>作ったものを配布しやすい</h3><ul>
+<li>node と一緒に npm が入る</li>
+<li>npm install tool でツールをゲット！</li>
+</ul><p>node の導入も楽なら、その後のツールの導入も楽</p></div>
+
+
+<div class="step" data-x="-7200" data-y="4800" data-rotate="90"><h3>frontend エンジニアの発想</h3><p>普段バリバリの JSer が不満を抱いて node でツールを作る</p></div>
+
+<div class="step ride-on" data-x="-7200" data-y="4800" data-z="3000" data-rotate="90"><h2>のるしかない</h2><p>このビックウェーブに</p></div>
+<!-- data-x: '+0' -->
+<!-- data-y: '+0' -->
+<!-- data-z: '+3000' -->
+<!-- class: ride-on -->
+
+
+<div class="step ride-on" data-x="-7200" data-y="4800" data-z="6000" data-rotate="90"><h2>いつのるの？</h2><p>いｍ（ｒｙ</p></div>
+<!-- data-x: '+0' -->
+<!-- data-y: '+0' -->
+<!-- data-z: '+3000' -->
+<!-- class: ride-on -->
+
+
+<div class="step" data-x="-8000" data-y="4800" data-rotate="90"><h2>WCAF vol.10 で<br>俺は成長するんだ！</h2><p>流行りのものや定番をいろいろ勉強</p><p>俺はやるぞ！</p></div>
+
+
+<div class="step" data-x="-8800" data-y="4800" data-rotate="90"><h2>web サービスを<br>作ってみた</h2><p><a href="https://moorchat.nodejitsu.com">https://moorchat.nodejitsu.com</a></p></div>
+
+<div class="step" data-x="-9600" data-y="4800" data-rotate="90"><h1>おことわり</h1></div>
+<div class="step" data-x="-10400" data-y="4800" data-rotate="90"><h2>プログラマー・ハイ</h2><p>web サービスをゴリゴリ作る<br>↓</p><p>テンションが上がる<br>↓</p><p>かなりプログラマー向けな話題に</p></div>
+
+
+
+<div class="step" data-x="-11200" data-y="4800" data-rotate="90"><h2>セッションの聞き方</h2><ol>
+<li>( ´_ゝ｀)ﾌｰﾝって感じで流す</li>
+<li>ツール名だけでも覚える</li>
+<li>さっきのサービスでJSといちゃいちゃする</li>
+<li>うっひょー俺もコーディングしちゃうぜ</li>
+</ol></div>
+
+<div class="step" data-rotate="180" data-x="-12000" data-y="4800"><h1>本題</h1></div>
+<!-- data-rotate: '+90' -->
+
+<div class="step" data-x="-12000" data-y="4000" data-rotate="180"><h2>やりたいこと</h2><ul>
+<li>最新技術や定番を勉強したい</li>
+<li>シングルページアプリ作りたい</li>
+<li>リアルタイムなの作りたい</li>
+</ul></div>
+
+<div class="step" data-x="-12000" data-y="3200" data-rotate="180"><h2>それぞれへの対応</h2><ul>
+<li>最新技術や定番を勉強したい<ul>
+<li>yeoman, bower, grunt, RequreJS, scss with compass</li>
+</ul>
+</li>
+<li>シングルページアプリ作りたい<ul>
+<li>knockoutjs, sammyjs</li>
+</ul>
+</li>
+<li>リアルタイムなの作りたい<ul>
+<li>socket.io</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-12000" data-y="2400" data-rotate="180"><h2>今回紹介するもの</h2><ul>
+<li>node 製のツール<ul>
+<li>bower, grunt, yeoman</li>
+</ul>
+</li>
+<li>frontend ライブラリ<ul>
+<li>knockout.js</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-rotate="90" data-x="-12000" data-y="1600"><h1>node 製のツール</h1></div>
+<!-- data-rotate: '-90' -->
+
+<div class="step" data-x="-12800" data-y="1600" data-rotate="90"><h1>yeoman</h1><p><a href="http://yeoman.io/"><img src="img/yeoman-logo.png" alt="yeoman-logo"></a></p><ul>
+<li>grunt, bower と連携し RequireJS, scss with compass, coffeescript などのひな形を作成するツール</li>
+<li><strong>最新技術や定番を追う</strong>にピッタリ</li>
+</ul></div>
+
+
+<div class="step" data-x="-13600" data-y="1600" data-rotate="90"><h2>あとまわし</h2><ul>
+<li>bower, grunt を先に説明します</li>
+</ul></div>
+
+<div class="step" data-rotate="180" data-x="-14400" data-y="1600"><h1>bower</h1><p><a href="http://bower.io/"><img src="img/bower-logo.png" alt="bower-logo"></a></p></div>
+<!-- data-rotate: '+90' -->
+
+
+<div class="step" data-x="-14400" data-y="800" data-rotate="180"><h2>A package manager<br>for the web</h2><ul>
+<li>フロントエンド版 npm</li>
+<li>npm はあくまで node 用のライブラリを取ってくるもの</li>
+<li>bower は例えば jquery だったりをコマンド一発で取ってくるもの</li>
+</ul></div>
+
+<div class="step" data-x="-14400" data-y="0" data-rotate="180"><h2>使い方</h2><ul>
+<li>黒い画面を開いて</li>
+<li>npm install -g bower</li>
+<li>bower -v でバージョン番号が出れば OK</li>
+</ul></div>
+
+<div class="step" data-x="-14400" data-y="-800" data-rotate="180"><h2>bower コマンド</h2><ul>
+<li>bower install</li>
+<li>bower search</li>
+<li>bower init<ul>
+<li>とても npm ライク</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-14400" data-y="-1600" data-rotate="180"><h3>bower search</h3><pre><code>$ bower search jquery  # search =&gt; s でも OK
+
+jquery git://github.com/components/jquery.git
+jquery-ui git://github.com/components/jqueryui
+jquery.cookie git://github.com/carhartl/jquery-cookie.git
+jquery-placeholder git://github.com/mathiasbynens/jquery-placeholder.git
+...</code></pre></div>
+
+<div class="step" data-x="-14400" data-y="-2400" data-rotate="180"><h3>bower install</h3><pre><code>$ bower install jquery  # install =&gt; i でも OK
+
+bower cloning git://github.com/components/jquery.git
+bower cached git://github.com/components/jquery.git
+bower fetching jquery
+bower checking out jquery#2.0.0
+bower copying /Users/..a260ac7c3997f4381
+bower installing jquery#2.0.0</code></pre></div>
+
+<div class="step" data-x="-14400" data-y="-3200" data-rotate="180"><h3>どこにインストールされた？</h3><p><img src="img/bower-install.png" alt="bower-install"></p><pre><code>&lt;script src=&quot;components/jquery/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre></div>
+
+
+<div class="step" data-x="-14400" data-y="-4000" data-rotate="180"><h3>一歩進んで</h3><p>依存関係の解決</p><pre><code>&lt;script src=&quot;components/jquery/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre><ul>
+<li>これが書かれたHTMLは、jQuery に依存している<ul>
+<li>jQuery がないと表示できない</li>
+</ul>
+</li>
+</ul></div>
+
+
+
+<div class="step code-small" data-x="-14400" data-y="-4800" data-rotate="180"><h3>bower.json</h3><p>bower init と叩くと、bower.json というファイルが作られる</p><pre><code>{
+  &quot;name&quot;: &quot;myapp&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;jquery&quot;: &quot;~2.0.0&quot;
+  },
+  &quot;ignore&quot;: [
+    &quot;**/.*&quot;,
+    &quot;node_modules&quot;,
+    &quot;components&quot;
+  ]
+}</code></pre></div>
+<!-- class: code-small -->
+
+
+
+<div class="step code-big" data-x="-14400" data-y="-5600" data-rotate="180"><h3>bower.json</h3><pre><code>  &quot;dependencies&quot;: {
+    &quot;jquery&quot;: &quot;~2.0.0&quot;
+  },</code></pre><p>dependencies : 依存</p></div>
+<!-- class: code-big -->
+
+
+
+<div class="step" data-x="-14400" data-y="-6400" data-rotate="180"><h3>bower install</h3><pre><code>$ bower install
+bower cloning git://github.com/components/jquery.git
+...
+bower installing jquery#2.0.0</code></pre><p>bower.json に書かれたとおりにライブラリをインストール</p></div>
+
+
+<div class="step" data-x="-14400" data-y="-7200" data-rotate="180"><h3>bower.json だけ管理すればOK</h3><p>昔: この html を表示するにはこれとこれとこれが必要だから全部zipでまとめておきましたテヘペロ</p><p>今: bower 入ってる？　なら bower install と叩けば OK だよ！</p></div>
+
+
+<div class="step" data-x="-14400" data-y="-8000" data-rotate="180"><h3>これ豆な</h3><ul>
+<li>bower install jquery --save<ul>
+<li>bower.json に追記してくれる</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-14400" data-y="-8800" data-rotate="180"><h3>bower まとめ</h3><p>まずはjqueryとかダウンロードするツールとして使ってみてください</p><p>その後、bower.json なんかに慣れていくと幸せになれると思います</p></div>
+
+
+<div class="step" data-rotate="270" data-x="-14400" data-y="-9600"><h2>GRUNT</h2><p><img src="img/grunt-logo.svg" alt="grunt-logo"></p></div>
+<!-- data-rotate: '+90' -->
+
+
+<div class="step" data-x="-13600" data-y="-9600" data-rotate="270"><h3>The JavaScript Task Runner</h3><p>単純作業(タスク)を JS で自動化</p><p>例）このファイルを削除してから、このファイルをコピーしてきてね</p><p>bat ファイルとかに近い</p></div>
+
+
+
+<div class="step" data-x="-12800" data-y="-9600" data-rotate="270"><h3>タスクの実行</h3><p>grunt {タスク名} で実行</p><p>grunt hoge</p></div>
+
+
+<div class="step" data-x="-12000" data-y="-9600" data-rotate="270"><h3>タスクを作る</h3><p>hoge というタスクを作る場合</p><pre><code>grunt.registerTask(&#39;hoge&#39;, function (target) { ... });</code></pre><p>作る方は時間がないので省略</p></div>
+
+
+
+<div class="step" data-x="-11200" data-y="-9600" data-rotate="270"><h3>yeoman のひな形では……</h3><ul>
+<li>grunt build<ul>
+<li>js を自動で 1 ファイルにくっつけて minify とか、配布用の準備</li>
+<li>RequireJS との連携も</li>
+</ul>
+</li>
+<li>grunt test<ul>
+<li>テストコード実行</li>
+</ul>
+</li>
+<li><strong>grunt server</strong><ul>
+<li>これがアツイ</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-10400" data-y="-9600" data-rotate="270"><h3>grunt server (demo)</h3><ul>
+<li>ローカルサーバを立て、そのページを自動で開く<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+</li>
+<li>ファイルの変更を監視<ul>
+<li>coffee が変われば js 生成</li>
+<li>scss が変われば css 生成</li>
+<li>自動でブラウザリロード</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-9600" data-y="-9600" data-rotate="270"><h3>grunt まとめ</h3><p>深く掘り下げにくい……時間ない</p><p>使いこなせば必ずあなたの目的にフィットするツールになるはず</p><p>grunt 勉強会とかやりたい</p></div>
+
+
+
+<div class="step" data-x="-8800" data-y="-9600" data-rotate="270"><h1>最後に yeoman</h1><p><a href="http://yeoman.io/"><img src="img/yeoman-logo.png" alt="yeoman-logo"></a></p></div>
+
+<div class="step" data-x="-8000" data-y="-9600" data-rotate="270"><h2>使い方</h2><ul>
+<li>npm install yo -g<ul>
+<li>grunt, bower, compass は自分でインストールする必要がある</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step small-img" data-x="-7200" data-y="-9600" data-rotate="270"><h2>yo webapp</h2><p><img src="img/yeoman-init.png" alt="yeoman-init"></p><p>ひな形が作られる</p></div>
+<!-- class: small-img -->
+
+
+
+<div class="step" data-x="-6400" data-y="-9600" data-rotate="270"><h2>ひな形の概要</h2><ul>
+<li>bower.json で bootstrap, jquery のセットアップ</li>
+<li>grunt 用の各種タスクが書かれた設定ファイル生成</li>
+<li>ディレクトリ構成をきれいに</li>
+</ul></div>
+
+<div class="step" data-x="-5600" data-y="-9600" data-rotate="270"><h2>yeoman いいところ</h2><ul>
+<li>各ツールの設定ファイル生成<ul>
+<li>grunt, bower, RequireJS などは設定ファイルを書くのが結構手間</li>
+<li>ディレクトリ構成考えるのも一苦労</li>
+<li>ひな形眺めるだけでも参考になる</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-4800" data-y="-9600" data-rotate="270"><h2>yeoman 難点</h2><ul>
+<li>scss が必須<ul>
+<li>こいつだけ ruby 製、 less の方が敷居は下がりそう</li>
+</ul>
+</li>
+<li>あくまで、ひな形<ul>
+<li>grunt, bower, scss, RequireJS などへの理解が求められる</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-rotate="180" data-x="-4000" data-y="-9600"><h1>frontend<br>ライブラリ</h1></div>
+<!-- data-rotate: '-90' -->
+
+<div class="step" data-x="-4000" data-y="-10400" data-rotate="180"><h1>knockout.js</h1><p><img src="img/knockout-logo.png" alt="knockout-logo"></p></div>
+
+<div class="step" data-x="-4000" data-y="-11200" data-rotate="180"><h2>MVVM フレームワーク</h2><p>え、難しそう、、</p></div>
+
+<div class="step" data-x="-4000" data-y="-11200" data-z="7000" data-rotate="180"><h2>大丈夫</h2></div>
+<!-- data-x: '+0' -->
+<!-- data-y: '+0' -->
+<!-- data-z: '+1000' -->
+
+<div class="step" data-x="-4000" data-y="-12000" data-rotate="180"><h2>例えばこんなフォーム</h2><p><div style="background-color: white">
+  <p>WCAF まんじゅう!!
+    <span data-bind="text: kakaku"></span>円
+  </p>
+  <p>注文数:
+    <input type="text" data-bind="value: kazu, valueUpdate: 'afterkeydown'">
+  </p>
+  <p>
+    <span data-bind="text: kakaku() * kazu()"></span>
+    円になります
+  </p>
+</div></p><script>
+var manjuViewModel = {
+  kakaku: ko.observable(500),
+  kazu: ko.observable(0)
+};
+ko.applyBindings(manjuViewModel);
+</script></div>
+
+
+
+<div class="step" data-x="-4000" data-y="-12800" data-rotate="180"><h2>こう書けます(HTML)</h2><pre><code>&lt;p&gt;WCAF まんじゅう!!
+  &lt;span data-bind=&quot;text: kakaku&quot;&gt;&lt;/span&gt;円
+&lt;/p&gt;
+&lt;p&gt;注文数:
+  &lt;input type=&quot;text&quot;
+         data-bind=&quot;value: kazu, 
+                    valueUpdate: &#39;afterkeydown&#39;&quot;/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;span data-bind=&quot;text: kakaku() * kazu()&quot;&gt;&lt;/span&gt;
+  円になります
+&lt;/p&gt;</code></pre></div>
+
+<div class="step code-big" data-x="-4000" data-y="-13600" data-rotate="180"><h2>こう書けます(JS)</h2><pre><code>var manjuViewModel = {
+  kakaku: ko.observable(500),
+  kazu: ko.observable(0)
+};
+ko.applyBindings(manjuViewModel);</code></pre></div>
+<!-- class: code-big -->
+
+
+<div class="step" data-x="-4000" data-y="-14400" data-rotate="180"><h2>What&#39;s MVVM?</h2><ul>
+<li>M: モデル</li>
+<li>V: ビュー</li>
+<li>VM: ビューモデル</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-15200" data-rotate="180"><h2>What&#39;s MVVM?</h2><ul>
+<li>M: まんじゅうの値段や個数</li>
+<li>V: HTML</li>
+<li>VM: まんじゅうとHTMLをつなぐ<ul>
+<li>まんじゅうの値段をこことここに書いてね</li>
+<li>まんじゅうの個数はこのフォームと連動してね</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-16000" data-rotate="180"><h2>なにがうれしい？</h2><ul>
+<li>まんじゅうの値段を10,000円にしたい<ul>
+<li>M を変えればいい</li>
+</ul>
+</li>
+<li>売ってるサイトの見た目を変えたい<ul>
+<li>V を変えればいい</li>
+</ul>
+</li>
+</ul><p>分かれてるので変更が用意</p></div>
+
+
+<div class="step" data-x="-4000" data-y="-16800" data-rotate="180"><h2>knockout まとめ</h2><ul>
+<li>MVC, MVVM フレームワーク色々<ul>
+<li>backbone, angular などなど</li>
+</ul>
+</li>
+<li>knockoutjs は一番シンプル（だと思う）<ul>
+<li>ピンポイントな用途でも使える</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-17600" data-rotate="180"><h1>その他<br>(サーバとか)</h1><p>さらっと流します；</p></div>
+
+<div class="step" data-x="-4000" data-y="-18400" data-rotate="180"><h2>express</h2><ul>
+<li>サーバを簡単にかけます（適当）</li>
+<li>ruby できる人は node 界の sinatra で通じる</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-19200" data-rotate="180"><h2>node-dev</h2><ul>
+<li>node のコードを監視して自動リロード</li>
+<li>grunt server の動きを express とかのサーバでも簡単に実現するコマンド</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-20000" data-rotate="180"><h2>socket.io</h2><ul>
+<li>websocket, xhr-polling, jsonp と様々な手段でリアルタイム通信を実現してくれる。</li>
+<li>クライアントがブラウザの場合、これを使わない理由があんまりない。<ul>
+<li>ブラウザ間の互換がすごい</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-20800" data-rotate="180"><h3>これ豆な</h3><ul>
+<li>require.js の wrap を false にしないとうまく動かない</li>
+<li><a href="https://groups.google.com/forum/#!msg/requirejs/irKdpw3Gfqg/TL7SL7v7Er0J">https://groups.google.com/forum/#!msg/requirejs/irKdpw3Gfqg/TL7SL7v7Er0J</a></li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-21600" data-rotate="180"><h1>そして<br>月日は流れ</h1></div>
+<div class="step" data-x="-4000" data-y="-22400" data-rotate="180"><h2>ムーアチャット爆誕</h2></div>
+<div class="step" data-x="-4000" data-y="-23200" data-rotate="180"><h3>まとめ</h3><p>最新技術を使うのは労力がいる</p><p>でもブラウザが自動リロードした時など心がおどる</p><p>私はサービス開発が好きだ</p></div>
+
+
+
+<div class="step" data-x="-4000" data-y="-24000" data-rotate="180"><h1>最後に</h1><p>今回のスライドについて</p></div>
+
+<div class="step" data-x="-4000" data-y="-24800" data-rotate="180"><h1>impress.js</h1><p>html + js でできたプレゼンツール</p></div>
+
+<div class="step" data-x="-4000" data-y="-25600" data-rotate="180"><h2>WCAF で<br>あるまじき発言</h2><ul>
+<li>html 書くのだるいな</li>
+<li>箇条書きでもかっこよくできねぇかな</li>
+<li>markdown から自動生成したいよね</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-26400" data-rotate="180"><h2>perl 製のがあった</h2><p><a href="https://github.com/yoshiki/markdown2impress">markdown2impress</a></p><p>でもちょっと弄りたいな……</p></div>
+
+
+<div class="step" data-x="-4000" data-y="-27200" data-rotate="180"><h2>node で作っちゃった☆</h2><ul>
+<li>node-markdown2impress<ul>
+<li>参考（perl）</li>
+</ul>
+</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-28000" data-rotate="180"><h2>これが、</h2><pre><code>### こうなります
+- ドヤァ
+- ドヤァ
+- ドヤァ</code></pre></div>
+
+<div class="step" data-x="-4000" data-y="-28800" data-rotate="180"><h2>こうなります</h2><ul>
+<li>ドヤァ</li>
+<li>ドヤァ</li>
+<li>ドヤァ</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-29600" data-rotate="180"><h2>あえて言おう</h2><p>このツール作ってる時間があれば</p><p>十分 keynote で用意できたさ</p></div>
+
+
+<div class="step" data-x="-4000" data-y="-30400" data-rotate="180"><h3>優秀なプログラマーは<br>楽をするためには<br>どんな苦労も厭わない</h3></div>
+<div class="step" data-x="-4000" data-y="-31200" data-rotate="180"><h3>現状を改善する手段</h3><ul>
+<li>grunt</li>
+<li>bower</li>
+<li>knockoutjs</li>
+<li>etc, etc...</li>
+</ul></div>
+
+<div class="step" data-x="-4000" data-y="-32000" data-rotate="180"><h3>node 興味なかったかたも<br>ちょっとだけ<br>苦労してみませんか？</h3></div>
+<div class="step" data-x="-4000" data-y="-32800" data-rotate="180"><h1>おわり</h1></div>
+</div>
+
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+
+  </body>
+</html>
