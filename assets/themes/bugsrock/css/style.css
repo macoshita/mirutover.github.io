@@ -28,6 +28,18 @@
   margin-bottom: 20px;
   font-weight: bold; }
 
+.post-full h2 {
+  font-size: 1.4em;
+  border-left: 0.5em solid #00AA00;
+  padding: 0 0 0 0.5em; }
+
+.post-full h3,
+.post-full h4,
+.post-full h5,
+.post-full h6 {
+  font-size: 1.2em;
+  font-weight: bold; }
+
 /* tag_box */
 .tag_box {
   list-style: none;

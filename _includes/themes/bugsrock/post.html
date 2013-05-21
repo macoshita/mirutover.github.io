@@ -8,13 +8,13 @@
       <span>{{ page.date | date_to_long_string }}</span>
     </div>
 
-    {% include sharing/sharing.html %}
-
-    <hr>
-
     <div class="content">
       {{ content }}
     </div>
+
+    <hr>
+
+    {% include sharing/sharing.html %}
 
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
