@@ -1,0 +1,10 @@
+---
+layout: post
+title: Windows で Vagrant の plugin をインストールするまでのハマりどころ
+date: 2013-04-23 01:42:25 UTC
+updated: 2013-04-23 01:42:25 UTC
+comments: false
+categories: Windows Vagrant
+---
+
+<p>こちらのブログにかなり助けられました。ありがとうございます。</p><p><a href="http://d.hatena.ne.jp/nazoking/20130409/1365486067">かなりはまりどころが多い windows に Vagrant 1.1 で sandbox ( sahara )</a></p><p>私が入れたのは vagrant-berkshelf だったので、要点だけ。</p><h2>環境</h2><ul><li>Windows 7</li><li>Vagrant 1.2.1</li></ul><h2>内容</h2><p>要するに、vagrant に embed してる gem コマンドが gcc を見つけられないのが問題っぽい（中身は rubyinstaller の devkit なのかな？）。</p><h2>手順</h2><p>C:¥Program Files (x86)¥HashiCorp¥Vagrant にインストールしたとする。このディレクトリ構成は 1.2 かららしい。</p><ul><li>メモ帳とか適当なテキストエディタを右クリックして管理者権限で起動</li><li>C:¥Program Files (x86)¥HashiCorp¥Vagrant¥embedded¥config.yml の中のパスを、"C:/Program Files (x86)/HashiCorp/Vagrant/embedded" に変更</li><li>コマンドプロンプトを管理者権限で開き、下記で devkit を上書きインストール</li></ul><table class="syntaxtable"><tr><td class="linenos"><div class="linenodiv"><pre>1<br />2</pre></div></td><td class="code"><div class="syntax"><pre><span class="k">cd</span> C:¥Program Files (x<span class="m">86</span>)¥HashiCorp¥Vagrant¥embedded<br />bin¥ruby.exe dk.rb install -f<br /></pre></div></td></tr></table> <h2>試す</h2><p>私は berkshelf のプラグインを入れたかったので、</p><table class="syntaxtable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="syntax"><pre>vagrant plugin install vagrant-berkshelf<br /></pre></div></td></tr></table> <p>で無事 OK。やれやれ。</p>

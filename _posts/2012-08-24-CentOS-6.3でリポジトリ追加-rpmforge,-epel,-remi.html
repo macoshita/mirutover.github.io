@@ -1,0 +1,10 @@
+---
+layout: post
+title: CentOS 6.3でリポジトリ追加 rpmforge, epel, remi
+date: 2012-08-24 13:50:50 UTC
+updated: 2012-08-24 13:50:50 UTC
+comments: false
+categories: CentOS
+---
+
+世の中にこの記事がどんだけ溢れてるんだって感じだけど、あえて増やす。<br />なんでリポジトリを追加するかというと、例えばremiを入れればyumでmysql 5.5が入ったりする。<br /><br />rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi<br />rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm<br />rpm --import http://ftp.jaist.ac.jp/pub/Linux/Fedora/epel/RPM-GPG-KEY-EPEL-6<br />rpm -ivh http://ftp.jaist.ac.jp/pub/Linux/Fedora/epel/6/x86_64/epel-release-6-7.noarch.rpm<br />rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt<br />rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm<br /><div><br /></div><div>こんなかんじで入れる。<br />で、さらにyumの優先度管理するやつをいれて、<br /><br />yum install yum-priorities<br /><br />上記３つのリポジトリはyum upgradeとかで使われないようにenableを0にしておく。<br />とはいえスナップショット取れるVMだとどうでもいいような気もする。<br />で、使うときは以下。<br /><br />yum --enablerepo=epel,remi,rpmforge list mysql<br /><br />CentOSでは鉄板の設定だね。もう何度かやってるので、ちょっとググって脳の引き出しに触れれば思い出せる感じ。まぁググりはするんだけど……。</div>

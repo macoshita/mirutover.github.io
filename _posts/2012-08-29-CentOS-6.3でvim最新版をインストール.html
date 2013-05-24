@@ -1,0 +1,10 @@
+---
+layout: post
+title: CentOS 6.3でvim最新版をインストール
+date: 2012-08-29 11:10:17 UTC
+updated: 2012-08-29 11:10:17 UTC
+comments: false
+categories: CentOS Vim
+---
+
+環境：CentOS6.3<br /><br />ソースコードをダウンロード、インストールする。<br />mercurialとpythonが入る。<br /><div></div><br /><div><pre class="example" style="background-color: #eeffcc; border-color: rgb(136, 170, 102); border-style: solid none; border-width: 1px medium; font-family: 'andale mono', 'monotype.com', 'courier new', monospace; padding: 5px;">yum install python-setuptools, python-devel, python, ncurses-devel<br />easy_install mercurial<br />hg clone https://vim.googlecode.com/hg/ vim<br />cd vim/src<br />./configure --enable-multibyte<br />make<br />make install</pre></div><br />configureについて、他のブログを見ていると、<br />--with-features=huge<br />--enable-xim<br />--enable-fontset<br />--disable-selinux<br />とかしているところもあったけど、ちゃっと調べて自分に必要かどうかすぐ判断できなかったので、一旦外しておいた。<br /><br /><br /><b>./configure --enable-multibyte</b>が抜けてたり、ncurses-develはデフォルトでは入ってないらしかったり、いろいろ微妙だったので修正しました；

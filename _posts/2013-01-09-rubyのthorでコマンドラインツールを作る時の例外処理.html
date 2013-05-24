@@ -1,0 +1,10 @@
+---
+layout: post
+title: rubyのthorでコマンドラインツールを作る時の例外処理
+date: 2013-01-09 04:37:33 UTC
+updated: 2013-01-09 04:37:33 UTC
+comments: false
+categories: Ruby
+---
+
+要するにスタックトレース出したくないだけなんだけど、ただ単にRuntimeErrorで投げちゃうと区別できないので、別途例外を作ってみた。 <br /><pre class="brush:ruby">require 'thor'<br /><br />class Hoge &lt; Thor<br />  desc "fuga YYYYMMDD", "fugafuga"<br />  def fuga(yyyymmdd)<br />    raise HogeError, "invalid date format" unless /^\d{8}$/ =~ yyyymmdd<br /><br />    puts "ok!"<br /><br />  rescue HogeError =&gt; ex<br />    puts ex<br />  end<br />  <br />  private<br />  class HogeError &lt; StandardError<br />  end<br />end<br /></pre>
