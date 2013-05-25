@@ -4,7 +4,8 @@ title: Rubyのブロックスコープ
 date: 2013-01-09 05:17:41 UTC
 updated: 2013-01-09 05:17:41 UTC
 comments: false
-categories: JavaScript Vim Ruby
+categories: blog
+tags: JavaScript Vim Ruby
 ---
 
 整理したら全然難しくなかったけど混乱した。 <br /><pre class="brush:ruby">1.times do<br />  TEST = "test"<br /><br />  def hoge<br />    "fuga"<br />  end<br /><br />  hey = "hi"<br />end<br /><br />puts TEST # =&gt; test<br />puts hoge # =&gt; fuga<br />puts hey  # =&gt; undefined<br /></pre>これだとつまり、ブロック内だけ有効な定数は作れないってことだな。padrinoだとコントローラの記述的にちょい微妙。<br /><br />あと、1.9と1.8で挙動が違って、 <br /><pre class="brush:ruby">hey = "hey"<br /><br />1.times do<br />  hey = "hi"<br />end<br /><br />puts hey  # 1.8 =&gt; "hey"<br />          # 1.9 =&gt; "hi"<br /></pre>となるらしい。この挙動は1.9の方がしっくりくるかな。<br /><br />追記：<br />さらに、instance_evalを使った時はこんな感じ<br /><pre class="brush:ruby">class A<br />  def self.add(&amp;block)<br />    instance_eval(&amp;block)<br />  end<br />end<br /><br />A.add do<br />  TEST = "test"<br /><br />  def hoge<br />    "fuga"<br />  end<br />end<br /><br />p TEST # =&gt; "test"<br />p hoge # =&gt; undef<br /></pre>instance_evalを実行するとこでブロックの解釈が行われるので、selfがAに展開される。でもやっぱり定数は貫く。ふーむ。

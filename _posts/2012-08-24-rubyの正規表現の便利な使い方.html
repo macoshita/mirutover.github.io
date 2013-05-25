@@ -4,7 +4,8 @@ title: rubyの正規表現の便利な使い方
 date: 2012-08-24 13:57:54 UTC
 updated: 2012-08-24 13:57:54 UTC
 comments: false
-categories: Ruby
+categories: blog
+tags: Ruby
 ---
 
 <a href="http://doc.okkez.net/static/192/method/Regexp/i/match.html">http://doc.okkez.net/static/192/method/Regexp/i/match.html</a><br /><br />こちらに載っているのが参考になるんだけど、<br /><pre class="brush:ruby">foo, bar, baz = /(foo)(bar)(baz)/.match("foobarbaz").to_a.values_at(1,2,3)<br /></pre>これは使いたい時に限って忘れそうなので覚えておく。<br />nilチェックを省略できるのがよい。

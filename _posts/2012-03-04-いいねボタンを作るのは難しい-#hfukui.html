@@ -4,7 +4,8 @@ title: いいねボタンを作るのは難しい #hfukui
 date: 2012-03-04 09:16:44 UTC
 updated: 2012-03-04 09:16:44 UTC
 comments: false
-categories: 
+categories: blog
+tags: 
 ---
 
 ハッカソンに参加してきて、twitter版のいいねボタン的なものを作っていたのだけど、当初の予定に反してめちゃくちゃ難しかった。<br /><br /><ul><li>XMLHTTPRequestでクッキーがうまく送信されない</li><li>クロスドメインでハマる</li><li>sinatraがデフォで入れ込むrack-protectionでハマる</li><li>iframeでハマる</li></ul><br />ホント、色々ハマりまくって駄目だった。APIは何とか作れて、twitterにログインしボタンを押すところまでは出来たけれど、当初予定してたクリック数のグラフ化なんかは間に合わなかったし、デザインも全く凝れなかった。<br />しかし、facebookのいいねボタンがいまいち設置しづらくて文句を言っていたけれど、作って分かる難しさ。これで更にクロスブラウザも考えなきゃいけないと考えると、その辺の調整だけであと２日はかかる気がする……。<br /><br />ただ、結構収穫も多くて、<br /><br /><ul><li>omniauth+sinatraがめちゃくちゃ簡単</li><li>AWS::SimpleDBはお手軽で安い。APIはちょっと微妙だけど。</li><li>Rubyというか、sinatraの勉強になった</li></ul><div>などなど、改めて分かることが多くて楽しかった。</div><div>とりあえずいいねボタンは完成させようっと。</div><br /><br />

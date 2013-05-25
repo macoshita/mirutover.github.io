@@ -4,7 +4,8 @@ title: よく使うtcpdumpオプションメモ
 date: 2012-02-02 06:18:07 UTC
 updated: 2012-02-02 06:18:07 UTC
 comments: false
-categories: 
+categories: blog
+tags: 
 ---
 
 tcpdump -s0 -i eth0 -X dst port 4567<br />-s0:&nbsp;全キャプチャ<br />-i eth0:&nbsp;eth0をキャプチャ<br />-X:&nbsp;16進表示<br />dst port 4567:&nbsp;4567ポートに入ってくるパケットをキャプチャ。srcで出てくパケットをキャプチャ<br /><div><br />取得したデータが文字化けてて、androidやiPhoneのアプリが悪いのかサーバが悪いのかハッキリ切り分けるために使った（キャプチャが化けていたらアプリが悪い、という判断）。</div><div>ちなみにwindowsだと<a href="http://www.wireshark.org/">wireshark</a>というソフトを使うのが定番だと思う。</div><div><br /></div><div><span style="font-size: xx-small;">ろくにドキュメント残ってないアプリとかを解析するのにも役立つ</span></div>
