@@ -79,3 +79,11 @@
 /* sharing */
 .sharing {
   margin: 2em 0 1em 0; }
+
+/* adsense */
+@media (max-width: 728px) {
+  .adsense {
+    position: relative;
+    left: -20px;
+  }
+}
