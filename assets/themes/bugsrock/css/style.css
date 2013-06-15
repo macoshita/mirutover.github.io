@@ -1,7 +1,7 @@
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
-  max-width: 700px; }
+  max-width: 728px; }
 
 .container-narrow > hr {
   margin: 30px 0; }
@@ -83,7 +83,6 @@
 /* adsense */
 @media (max-width: 728px) {
   .adsense {
-    position: relative;
-    left: -20px;
+    margin-left: -20px;
   }
 }
