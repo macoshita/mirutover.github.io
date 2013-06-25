@@ -40,7 +40,7 @@ tags: ["Event"]
 
 そんな良い環境の中で生まれたアイデアがこちら。
 
-<iframe src="http://www.slideshare.net/slideshow/embed_code/23460839" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<script async class="speakerdeck-embed" data-id="74010d50bfcd013094bb4e5911ec3094" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 越前市のイベントをスマートフォンにプッシュ通知することで、市民のイベントへの参加率を高め、市を元気に、明るくしようという企画です。
 また、補足になりますが、オープンデータを使うサービスは多々あるのに対し、**オープンデータを作るサービス**はあまりないのかなと考え、そのあたりも少し意識しています。
