@@ -80,6 +80,15 @@
 .sharing {
   margin: 2em 0 1em 0; }
 
+/* font-size */
+.big {
+  font-size: 2em;
+}
+
+.small {
+  font-size: 0.5em;
+}
+
 /* adsense */
 @media (max-width: 728px) {
   .adsense {
